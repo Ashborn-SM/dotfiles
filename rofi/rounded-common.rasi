@@ -17,7 +17,7 @@
 
 window {
     location:       center;
-    width:          480;
+    width:          380;
     y-offset:       -200;
     border-radius:  24px;
     

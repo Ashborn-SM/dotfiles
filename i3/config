@@ -187,6 +187,8 @@ bindsym $mod+r mode "resize"
 
 ############ CUSTOM ###############
 
+workspace 1 output eDP-1-1 eDP-1
+
 # Keybinds
 bindsym $mod+d exec rofi -show drun
 bindsym $mod+w exec rofi -show window
@@ -196,8 +198,8 @@ bindsym $mod+Control+s exec flameshot screen -r -p ~/Pictures/Screenshots
 bindsym $mod+Control+r exec flameshot gui -p ~/Pictures/Screenshots
 
 # App
-bindsym $mod+Control+b exec brave
-bindsym $mod+Control+f exec firefox
+bindsym $mod+Control+b workspace 2; exec brave
+bindsym $mod+Control+f workspace 3; exec firefox
 
 
 # Windows
@@ -205,13 +207,13 @@ for_window [class=".*"] border pixel 0
 for_window [class="Yad" title="yad-calendar"] floating enable
 
 # gaps
-gaps inner 8 
+gaps inner 8
 #gaps top 20
 
 # Startup
 exec --no-startup-id kitty
 exec_always --no-startup-id xrandr --output HDMI-0 --mode 1600x900 --output eDP-1-1 --primary --mode 1920x1080 --left-of HDMI-0
-exec_always --no-startup-id feh --bg-scale $HOME/Downloads/10657.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/789596.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always --no-startup-id picom --experimental-backends &
 exec_always --no-startup-id dunst &

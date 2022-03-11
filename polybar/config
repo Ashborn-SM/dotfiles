@@ -39,7 +39,7 @@ height = 25
 radius = 0
 fixed-center = true
 
-background = #cc000000
+background = #000000
 foreground = ${colors.foreground}
 
 line-size = 3

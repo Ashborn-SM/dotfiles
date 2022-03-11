@@ -36,8 +36,8 @@ exec --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +10% && $refresh_i3status
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -10% && $refresh_i3status
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle && $refresh_i3status
 bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOURCE@ toggle && $refresh_i3status
 
@@ -201,9 +201,11 @@ bindsym $mod+Control+r exec flameshot gui -p ~/Pictures/Screenshots
 bindsym $mod+Control+b workspace 2; exec brave
 bindsym $mod+Control+f workspace 3; exec firefox
 
+bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/.config/i3/brightness.sh UP
+bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/.config/i3/brightness.sh DOWN
 
 # Windows
-for_window [class=".*"] border pixel 0 
+for_window [class=".*"] border pixel 2 
 for_window [class="Yad" title="yad-calendar"] floating enable
 
 # gaps
@@ -211,9 +213,12 @@ gaps inner 8
 #gaps top 20
 
 # Startup
+exec_always --no-startup-id killall picom
+exec_always --no-startup-id killall dunst 
+
 exec --no-startup-id kitty
 exec_always --no-startup-id xrandr --output HDMI-0 --mode 1600x900 --output eDP-1-1 --primary --mode 1920x1080 --left-of HDMI-0
 exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/789596.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always --no-startup-id picom --experimental-backends &
-exec_always --no-startup-id dunst &
+# exec_always --no-startup-id dunst &

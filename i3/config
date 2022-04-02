@@ -221,4 +221,4 @@ exec_always --no-startup-id xrandr --output HDMI-0 --mode 1600x900 --output eDP-
 exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/789596.jpg
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always --no-startup-id picom --experimental-backends &
-# exec_always --no-startup-id dunst &
+exec_always --no-startup-id dunst &

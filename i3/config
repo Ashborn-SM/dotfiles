@@ -198,11 +198,19 @@ bindsym $mod+Control+s exec flameshot screen -r -p ~/Pictures/Screenshots
 bindsym $mod+Control+r exec flameshot gui -p ~/Pictures/Screenshots
 
 # App
-bindsym $mod+Control+b workspace 2; exec brave
-bindsym $mod+Control+f workspace 3; exec firefox
+bindsym $mod+Control+b workspace 2; exec --no-startup-id  brave
+bindsym $mod+Control+f workspace 3; exec --no-startup-id firefox
+
+# Alternative keybinds for vol up & down and brightness up & down
 
 bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/.config/i3/brightness.sh UP
 bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/.config/i3/brightness.sh DOWN
+
+bindsym $mod+Control+equal exec --no-startup-id $HOME/.config/i3/brightness.sh UP
+bindsym $mod+Control+minus exec --no-startup-id $HOME/.config/i3/brightness.sh DOWN
+
+bindsym $mod+equal exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% && $refresh_i3status
+bindsym $mod+minus exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% && $refresh_i3status
 
 # Windows
 for_window [class=".*"] border pixel 2 
@@ -218,7 +226,7 @@ exec_always --no-startup-id killall dunst
 
 exec --no-startup-id kitty
 exec_always --no-startup-id xrandr --output HDMI-0 --mode 1600x900 --output eDP-1-1 --primary --mode 1920x1080 --left-of HDMI-0
-exec_always --no-startup-id feh --bg-scale $HOME/.config/i3/789596.jpg
+exec_always --no-startup-id feh --bg-scale $HOME/Downloads/1188708.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always --no-startup-id picom --experimental-backends &
 exec_always --no-startup-id dunst &

@@ -21,7 +21,7 @@
 background = #901f2931
 background-alt = #5002fefe 
 ;foreground = ${xrdb:color7:#222}
-foreground = #ffffff
+foreground = #ffff
 foreground-alt = #ffffff
 primary = #28ffff
 secondary = #ffffff
@@ -35,18 +35,18 @@ override-redirect = false
 width = 100%
 height = 25
 ;offset-x = 10%
-;offset-y = -5
+;offset-y = -5%
 radius = 0
 fixed-center = true
 
-background = #000000
+background = #99000000
 foreground = ${colors.foreground}
 
 line-size = 3
 line-color = #f00
 
 border-size = 0
-border-color = #0000000
+border-color = #0000
 
 padding-left = 0
 padding-right = 2

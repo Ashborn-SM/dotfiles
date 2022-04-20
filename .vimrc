@@ -3,13 +3,13 @@
 " --------
 call plug#begin()
 
-    " Theme
+    "Auto-Completion 
     Plug 'https://github.com/ycm-core/YouCompleteMe.git'
+    "Theme
     Plug 'https://github.com/ackyshake/Spacegray.vim.git'
 
 call plug#end()
-"------------------------------------------------------------------------------
-"
+"-------------------------------------------------------------------------------
 
 " Color Scheme
 set background=dark

@@ -226,7 +226,7 @@ exec_always --no-startup-id killall dunst
 
 exec --no-startup-id kitty
 exec_always --no-startup-id xrandr --output HDMI-0 --mode 1600x900 --output eDP-1-1 --primary --mode 1920x1080 --left-of HDMI-0
-exec_always --no-startup-id feh --bg-scale $HOME/dev/i3/1188708.png
+exec_always --no-startup-id feh --bg-scale $HOME/dev/dotfiles/i3/1188708.png
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 exec_always --no-startup-id picom --experimental-backends &
 exec_always --no-startup-id dunst &

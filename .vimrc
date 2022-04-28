@@ -44,3 +44,6 @@ set incsearch
 set hlsearch
 " Ignore caps during search
 set ignorecase
+
+" Custom Commands
+

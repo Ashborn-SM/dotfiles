@@ -198,7 +198,7 @@ bindsym $mod+Control+s exec flameshot screen -r -p ~/Pictures/Screenshots
 bindsym $mod+Control+r exec flameshot gui -p ~/Pictures/Screenshots
 
 # App
-bindsym $mod+Control+b workspace 2; exec --no-startup-id  brave
+bindsym $mod+Control+b workspace 2; exec --no-startup-id  brave-nightly
 bindsym $mod+Control+f workspace 3; exec --no-startup-id firefox
 
 # Alternative keybinds for vol up & down and brightness up & down
